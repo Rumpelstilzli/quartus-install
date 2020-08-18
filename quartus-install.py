@@ -209,7 +209,8 @@ quartus_url_180std = {
     'm10' : "http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/max10-18.0.0.614.qdz",
     's4' : "http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/stratixiv-18.0.0.614.qdz",
     's5': "http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/stratixv-18.0.0.614.qdz",
-    'eds' : 'http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/SoCEDSSetup-18.0.0.614-linux.run'
+    'eds' : 'http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/SoCEDSSetup-18.0.0.614-linux.run',
+    'dsp' : "http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/DSPBuilderSetup-18.0.0.614-linux.run"
 }
 
 quartus_url_180lite = dict(quartus_url_180std)
@@ -429,14 +430,14 @@ if not args.install_only:
     #rc, urls = download_quartus(version, parts, args)
 if not args.download_only:
     print("Installing Quartus\n")
-    #install_quartus(version, target)
+    install_quartus(version, target)
     for patch in parts:
         if patch.split("_",1)[0] == "patch":
             print("Installing patch %s\n" % (patch))
-            #install_patch(version, target, patch)
+            install_patch(version, target, patch)
         if patch.split("_",1)[0] == "update":
             print("Installing update %s\n" % (patch))
-            #install_patch(version, target, patch)
+            install_patch(version, target, patch)
 
 if args.prune and not args.install_only:
     for url in urls:
