@@ -374,7 +374,7 @@ def install_quartus(version, installdir):
     
 def run_installer(installerfile, installdir):
     leafname = os.path.basename(installerfile)
-    os.chmod(leafname, 0o755)
+    os.chmod(leafname, 0o777)
     target = os.path.abspath(installdir)
     args = ['--mode', 'unattended', '--unattendedmodeui', 'minimal']
     numeric_version = ''.join(i for i in version if i.isdigit() or i=='.')
