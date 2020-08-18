@@ -412,6 +412,7 @@ version = args.version
 target = args.target
 parts = []
 
+
 if not cmd_exists('aria2c'):
     print("Please install the 'aria2' tool (command line executable 'aria2c')")
     sys.exit(2)
@@ -425,17 +426,17 @@ if not args.nosetup:
 parts = parts + match_wanted_parts(version, args.device)
 if not args.install_only:
     print("Downloading Quartus %s parts %s\n" % (version, parts))
-    rc, urls = download_quartus(version, parts, args)
+    #rc, urls = download_quartus(version, parts, args)
 if not args.download_only:
     print("Installing Quartus\n")
-    install_quartus(version, target)
+    #install_quartus(version, target)
     for patch in parts:
         if patch.split("_",1)[0] == "patch":
             print("Installing patch %s\n" % (patch))
-            install_patch(version, target, patch)
+            #install_patch(version, target, patch)
         if patch.split("_",1)[0] == "update":
             print("Installing update %s\n" % (patch))
-            install_patch(version, target, patch)
+            #install_patch(version, target, patch)
 
 if args.prune and not args.install_only:
     for url in urls:
