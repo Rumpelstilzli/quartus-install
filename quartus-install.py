@@ -195,6 +195,7 @@ quartus_url_180pro = {
 
 quartus_url_180std = {
     'setup' : "http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/QuartusSetup-18.0.0.614-linux.run",
+    'modelsim' : "http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/ModelSimSetup-18.0.0.614-linux.run",
     'a2' : "http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/arria-18.0.0.614.qdz",
     'a10_part1' : "http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/arria10_part1-18.0.0.614.qdz",
     'a10_part2' : "http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/arria10_part2-18.0.0.614.qdz",
@@ -207,7 +208,8 @@ quartus_url_180std = {
     'm5': "http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/max-18.0.0.614.qdz",
     'm10' : "http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/max10-18.0.0.614.qdz",
     's4' : "http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/stratixiv-18.0.0.614.qdz",
-    's5': "http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/stratixv-18.0.0.614.qdz"
+    's5': "http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/stratixv-18.0.0.614.qdz",
+    'eds' : 'http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_installers/SoCEDSSetup-18.0.0.614-linux.run'
 }
 
 quartus_url_180lite = dict(quartus_url_180std)
